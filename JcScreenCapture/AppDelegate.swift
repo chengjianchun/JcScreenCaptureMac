@@ -1,39 +1,73 @@
-//
-//  AppDelegate.swift
-//  JcScreenCapture
-//
-//  Created by jianchun on 2020/7/25.
-//  Copyright © 2020 Jianchun Cheng. All rights reserved.
-//
-
 import Cocoa
 import SwiftUI
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    
+    var appName: String
+    var appDir: String
+    var screenshotDir: String
+    var logDir: String
+    var interval: UInt32
 
-    var window: NSWindow!
-
-
+    override init() {
+        appName = "JcScreenCapture"
+        appDir = NSString(string: NSHomeDirectory()).appendingPathComponent(appName)
+        screenshotDir = NSString(string: appDir).appendingPathComponent("screenshot")
+        logDir = NSString(string: appDir).appendingPathComponent("log")
+        interval = 60
+    
+        super.init()
+    }
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
-
-        // Create the window and set the content view. 
-        window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
-            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-            backing: .buffered, defer: false)
-        window.center()
-        window.setFrameAutosaveName("Main Window")
-        window.contentView = NSHostingView(rootView: contentView)
-        window.makeKeyAndOrderFront(nil)
+        self.startCaptrue()
+    }
+    
+    func startCaptrue() {
+        Thread.detachNewThread {
+            while true {
+                self.capture()
+                sleep(self.interval)
+            }
+        }
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+//    func capture() {
+//        let df = DateFormatter()
+//        df.dateFormat = "yyyyMMdd-HHmmss"
+//        let s = df.string(from: Date())
+//        let file = "/Users/Shared/JcScreenCapture/\(s).jpg"
+//
+//        let task = Process()
+//        let pipe = Pipe()
+//        task.launchPath = "/usr/sbin/screencapture"
+//        task.arguments = ["-Cxtjpg", file]
+//        task.standardOutput = pipe
+//        task.launch()
+//        task.waitUntilExit()
+//    }
+
+    func capture() {
+        let path = self.getPath()
+        print(path)
+
+        let img = CGDisplayCreateImage(CGMainDisplayID())
+        let dest = CGImageDestinationCreateWithURL(URL(fileURLWithPath: path) as CFURL, kUTTypeJPEG, 1, nil)
+        defer {
+            CGImageDestinationFinalize(dest!)
+        }
+        CGImageDestinationAddImage(dest!, img!, nil)
     }
-
-
+    
+    func getPath() -> String {
+        let now = Date()
+        let df = DateFormatter()
+        df.dateFormat = "yyyyMMdd"
+        let dir = NSString(string: self.screenshotDir).appendingPathComponent(df.string(from: now))
+        try! FileManager.default.createDirectory(atPath: dir, withIntermediateDirectories: true, attributes: nil)
+        df.dateFormat = "yyyyMMdd-HHmmss"
+        return NSString(string: dir).appendingPathComponent(df.string(from: now) + ".jpg")
+    }
+    
 }
-
