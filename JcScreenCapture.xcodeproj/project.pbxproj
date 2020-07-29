@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CD83722C24CC68E600DD8F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD83722B24CC68E600DD8F86 /* AppDelegate.swift */; };
-		CD83722E24CC68E600DD8F86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD83722D24CC68E600DD8F86 /* ContentView.swift */; };
 		CD83723024CC68E700DD8F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD83722F24CC68E700DD8F86 /* Assets.xcassets */; };
 		CD83723324CC68E700DD8F86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD83723224CC68E700DD8F86 /* Preview Assets.xcassets */; };
 		CD83723624CC68E700DD8F86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD83723424CC68E700DD8F86 /* Main.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		CD83722824CC68E600DD8F86 /* JcScreenCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JcScreenCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD83722B24CC68E600DD8F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD83722D24CC68E600DD8F86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CD83722F24CC68E700DD8F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD83723224CC68E700DD8F86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD83723524CC68E700DD8F86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,7 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				CD83722B24CC68E600DD8F86 /* AppDelegate.swift */,
-				CD83722D24CC68E600DD8F86 /* ContentView.swift */,
 				CD83722F24CC68E700DD8F86 /* Assets.xcassets */,
 				CD83723424CC68E700DD8F86 /* Main.storyboard */,
 				CD83723724CC68E700DD8F86 /* Info.plist */,
@@ -145,7 +142,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD83722E24CC68E600DD8F86 /* ContentView.swift in Sources */,
 				CD83722C24CC68E600DD8F86 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,7 +210,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +264,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -284,14 +280,14 @@
 				CODE_SIGN_ENTITLEMENTS = JcScreenCapture/JcScreenCapture.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"JcScreenCapture/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = JcScreenCapture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = space.jianchun.JcScreenCapture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -305,14 +301,14 @@
 				CODE_SIGN_ENTITLEMENTS = JcScreenCapture/JcScreenCapture.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"JcScreenCapture/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = JcScreenCapture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = space.jianchun.JcScreenCapture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
