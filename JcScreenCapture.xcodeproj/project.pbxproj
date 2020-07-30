@@ -11,6 +11,8 @@
 		CD83723024CC68E700DD8F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD83722F24CC68E700DD8F86 /* Assets.xcassets */; };
 		CD83723324CC68E700DD8F86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD83723224CC68E700DD8F86 /* Preview Assets.xcassets */; };
 		CD83723624CC68E700DD8F86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD83723424CC68E700DD8F86 /* Main.storyboard */; };
+		CDF4EE7324D1BD01001FEA3A /* JcUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF4EE7224D1BD01001FEA3A /* JcUtility.swift */; };
+		CDF4EE7524D1BD55001FEA3A /* JcConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF4EE7424D1BD55001FEA3A /* JcConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		CD83723524CC68E700DD8F86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD83723724CC68E700DD8F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD83723824CC68E700DD8F86 /* JcScreenCapture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JcScreenCapture.entitlements; sourceTree = "<group>"; };
+		CDF4EE7224D1BD01001FEA3A /* JcUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JcUtility.swift; sourceTree = "<group>"; };
+		CDF4EE7424D1BD55001FEA3A /* JcConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JcConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +59,11 @@
 			children = (
 				CD83722B24CC68E600DD8F86 /* AppDelegate.swift */,
 				CD83722F24CC68E700DD8F86 /* Assets.xcassets */,
-				CD83723424CC68E700DD8F86 /* Main.storyboard */,
 				CD83723724CC68E700DD8F86 /* Info.plist */,
+				CDF4EE7424D1BD55001FEA3A /* JcConfig.swift */,
 				CD83723824CC68E700DD8F86 /* JcScreenCapture.entitlements */,
+				CDF4EE7224D1BD01001FEA3A /* JcUtility.swift */,
+				CD83723424CC68E700DD8F86 /* Main.storyboard */,
 				CD83723124CC68E700DD8F86 /* Preview Content */,
 			);
 			path = JcScreenCapture;
@@ -143,6 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD83722C24CC68E600DD8F86 /* AppDelegate.swift in Sources */,
+				CDF4EE7524D1BD55001FEA3A /* JcConfig.swift in Sources */,
+				CDF4EE7324D1BD01001FEA3A /* JcUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
