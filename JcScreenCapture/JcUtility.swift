@@ -65,7 +65,7 @@ public class JcUtility {
     }
     
     static func getLocalTime() -> Date {
-        return self.convertToLocal(date: Date())
+        return Date()
     }
     
     static func getCreationDate(path: String) throws -> Date? {
